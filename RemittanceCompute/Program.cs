@@ -14,13 +14,13 @@ decimal amount = 0;
 
 Remittance.Calculate(ref amount, ref moneyToSend, incentive);
 
-var totalAmount = amount + transactionCost;
+var totalAmount = (amount/conversionRate) + transactionCost;
 
-Console.WriteLine($"Total amount: {totalAmount}");
+Console.WriteLine($"Total amount: {Math.Round(totalAmount, 2)}");
 
 public class Remittance
 {
-    public static decimal Calculate(ref decimal amount, ref decimal moneyToSend, decimal incentive)
+    public static Task Calculate(ref decimal amount, ref decimal moneyToSend, decimal incentive)
     {       
         var obtainedIncentive = moneyToSend * (incentive / 100);
         var draftAmount = moneyToSend - obtainedIncentive;
@@ -33,6 +33,6 @@ public class Remittance
             Calculate(ref amount, ref moneyToSend, incentive);
         }
 
-        return moneyToSend;
+        return Task.CompletedTask;
     }
 }
