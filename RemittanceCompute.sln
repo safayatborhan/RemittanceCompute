@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemittanceCompute", "RemittanceCompute\RemittanceCompute.csproj", "{294101B1-3B2F-40C6-9925-42AB0A44AEF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemittanceCompute.API", "API\RemittanceCompute.API\RemittanceCompute.API.csproj", "{15F2A659-B342-4C92-84C7-C2444479C4DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{294101B1-3B2F-40C6-9925-42AB0A44AEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{294101B1-3B2F-40C6-9925-42AB0A44AEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294101B1-3B2F-40C6-9925-42AB0A44AEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F2A659-B342-4C92-84C7-C2444479C4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F2A659-B342-4C92-84C7-C2444479C4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F2A659-B342-4C92-84C7-C2444479C4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F2A659-B342-4C92-84C7-C2444479C4DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
