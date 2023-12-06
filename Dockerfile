@@ -7,7 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["API/RemittanceCompute.API/RemittanceCompute.API.csproj", "API/RemittanceCompute.API/"]
+COPY ["./API/RemittanceCompute.API/RemittanceCompute.API.csproj", "API/RemittanceCompute.API/"]
+#COPY ["./RemittanceCompute/", "RemittanceCompute/"]
 RUN dotnet restore "API/RemittanceCompute.API/RemittanceCompute.API.csproj"
 COPY . .
 WORKDIR "/src/API/RemittanceCompute.API"

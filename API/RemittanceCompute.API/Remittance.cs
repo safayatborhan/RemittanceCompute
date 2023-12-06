@@ -2,7 +2,7 @@
 {
     // Calculate the precise amount that needs to be sent and updates the reference variable "amount".
     public static Task Calculate(ref decimal amount, ref decimal moneyToSend, decimal incentive)
-    {
+    {       
         var obtainedIncentive = moneyToSend * (incentive / 100);
         var leftOverAmount = moneyToSend - obtainedIncentive;
         var incentiveAmountForLeftOver = leftOverAmount * (incentive / 100);
@@ -14,8 +14,6 @@
         {
             Calculate(ref amount, ref moneyToSend, incentive);
         }
-
-        //amount = Math.Ceiling(moneyToSend / (1 + incentive / 100));
 
         return Task.CompletedTask;
     }
